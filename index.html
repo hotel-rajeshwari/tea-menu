@@ -1,0 +1,425 @@
+```html
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>👑 रॉयल चहा</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#0d0d0d;
+color:#fff;
+overflow-x:hidden;
+}
+
+/* HERO */
+
+.hero{
+min-height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+background:
+linear-gradient(rgba(0,0,0,.85),rgba(0,0,0,.85)),
+url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=1400');
+background-size:cover;
+background-position:center;
+}
+
+/* STEAM */
+
+.steam-container{
+height:80px;
+position:relative;
+margin-bottom:15px;
+}
+
+.steam{
+position:absolute;
+left:50%;
+width:12px;
+height:60px;
+background:rgba(255,255,255,.15);
+border-radius:50%;
+filter:blur(8px);
+animation:steam 3s infinite ease-in-out;
+}
+
+.steam:nth-child(1){
+margin-left:-20px;
+}
+
+.steam:nth-child(2){
+animation-delay:1s;
+}
+
+.steam:nth-child(3){
+margin-left:20px;
+animation-delay:2s;
+}
+
+@keyframes steam{
+0%{
+transform:translateY(0) scale(1);
+opacity:0;
+}
+30%{
+opacity:1;
+}
+100%{
+transform:translateY(-80px) scale(2);
+opacity:0;
+}
+}
+
+/* TITLE */
+
+.shop-name{
+font-size:65px;
+font-weight:700;
+color:#fff5dc;
+animation:glow 2s infinite alternate;
+}
+
+@keyframes glow{
+from{
+text-shadow:0 0 10px rgba(255,200,87,.4);
+}
+to{
+text-shadow:
+0 0 20px rgba(255,200,87,.8),
+0 0 40px rgba(255,200,87,.5);
+}
+}
+
+.tea-cup{
+font-size:60px;
+margin-top:15px;
+animation:floatTea 3s infinite ease-in-out;
+}
+
+@keyframes floatTea{
+0%,100%{
+transform:translateY(0);
+}
+50%{
+transform:translateY(-10px);
+}
+}
+
+.maggi-animation{
+font-size:60px;
+margin-top:10px;
+animation:maggiBounce 4s infinite ease-in-out;
+}
+
+@keyframes maggiBounce{
+0%,100%{
+transform:translateY(0) rotate(0deg);
+}
+25%{
+transform:translateY(-10px) rotate(-5deg);
+}
+50%{
+transform:translateY(-20px) rotate(5deg);
+}
+75%{
+transform:translateY(-10px) rotate(-5deg);
+}
+}
+
+.tagline{
+font-size:22px;
+color:#90ee90;
+margin-top:15px;
+}
+
+/* MARQUEE */
+
+.marquee{
+overflow:hidden;
+white-space:nowrap;
+width:100%;
+margin-top:25px;
+}
+
+.marquee span{
+display:inline-block;
+padding-left:100%;
+animation:scrollText 18s linear infinite;
+font-size:18px;
+font-weight:600;
+color:#ffc857;
+}
+
+@keyframes scrollText{
+from{
+transform:translateX(0);
+}
+to{
+transform:translateX(-100%);
+}
+}
+
+/* SECTIONS */
+
+.section{
+padding:60px 20px;
+}
+
+.section-title{
+text-align:center;
+font-size:36px;
+margin-bottom:30px;
+color:#ffc857;
+animation:pulseTitle 2s infinite;
+}
+
+@keyframes pulseTitle{
+0%,100%{
+transform:scale(1);
+}
+50%{
+transform:scale(1.05);
+}
+}
+
+.menu-card{
+max-width:850px;
+margin:auto;
+background:#181818;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 0 25px rgba(255,200,87,.15);
+}
+
+.menu-item{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px;
+border-bottom:1px solid rgba(255,255,255,.08);
+transition:.3s;
+}
+
+.menu-item:hover{
+background:rgba(255,200,87,.08);
+padding-left:30px;
+}
+
+.menu-item:last-child{
+border:none;
+}
+
+.item-name{
+font-size:22px;
+}
+
+.price{
+font-size:22px;
+font-weight:bold;
+color:#90ee90;
+}
+
+/* SPECIAL */
+
+.special-box{
+max-width:850px;
+margin:auto;
+background:#181818;
+padding:30px;
+border-radius:20px;
+box-shadow:0 0 25px rgba(255,200,87,.15);
+}
+
+.special-box ul{
+padding-left:20px;
+line-height:2;
+font-size:18px;
+}
+
+/* FOOTER */
+
+.footer{
+background:#080808;
+padding:40px 20px;
+text-align:center;
+}
+
+.footer h3{
+color:#ffc857;
+margin-bottom:10px;
+}
+
+.footer p{
+color:#ccc;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.shop-name{
+font-size:42px;
+}
+
+.tagline{
+font-size:18px;
+}
+
+.section-title{
+font-size:28px;
+}
+
+.item-name,
+.price{
+font-size:18px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+
+<div class="steam-container">
+<span class="steam"></span>
+<span class="steam"></span>
+<span class="steam"></span>
+</div>
+
+<h1 class="shop-name">👑 रॉयल चहा</h1>
+
+<div class="tea-cup">☕</div>
+
+<div class="maggi-animation">🍜</div>
+
+<p class="tagline">
+राजेशाही स्वाद, प्रत्येक घोटात
+</p>
+
+<div class="marquee">
+<span>
+🔥 स्पेशल चहा • कॉफी • ब्लॅक टी • लेमन टी • मॅगी उपलब्ध • गरमागरम चहा • ताजी मॅगी • आपले स्वागत आहे 🔥
+</span>
+</div>
+
+</section>
+
+<section class="section">
+
+<h2 class="section-title">☕ चहा मेनू</h2>
+
+<div class="menu-card">
+
+<div class="menu-item">
+<span class="item-name">☕ चहा</span>
+<span class="price">₹10</span>
+</div>
+
+<div class="menu-item">
+<span class="item-name">☕ कॉफी</span>
+<span class="price">₹15</span>
+</div>
+
+<div class="menu-item">
+<span class="item-name">🍵 ब्लॅक टी</span>
+<span class="price">₹15</span>
+</div>
+
+<div class="menu-item">
+<span class="item-name">🍋 लेमन टी</span>
+<span class="price">₹15</span>
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<div class="steam-container">
+<span class="steam"></span>
+<span class="steam"></span>
+<span class="steam"></span>
+</div>
+
+<h2 class="section-title">🍜 मॅगी स्पेशल</h2>
+
+<div class="menu-card">
+
+<div class="menu-item">
+<span class="item-name">🍜 क्लासिक मॅगी</span>
+<span class="price">₹35</span>
+</div>
+
+<div class="menu-item">
+<span class="item-name">🌶️ स्पायसी मॅगी</span>
+<span class="price">₹40</span>
+</div>
+
+<div class="menu-item">
+<span class="item-name">🧀 चीज मॅगी</span>
+<span class="price">₹45</span>
+</div>
+
+<div class="menu-item">
+<span class="item-name">🔥🧀 चीज स्पायसी मॅगी</span>
+<span class="price">₹50</span>
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2 class="section-title">⭐ आमची खासियत</h2>
+
+<div class="special-box">
+
+<ul>
+<li>✔️ स्वच्छ व सुरक्षित वातावरण</li>
+<li>✔️ दर्जेदार साहित्य</li>
+<li>✔️ ताजे आणि स्वादिष्ट पदार्थ</li>
+<li>✔️ जलद सेवा</li>
+<li>✔️ ग्राहकांचे समाधान हेच आमचे ध्येय</li>
+</ul>
+
+</div>
+
+</section>
+
+<footer class="footer">
+
+<h3>🙏 रॉयल चहा ला भेट दिल्याबद्दल धन्यवाद</h3>
+
+<p>चहाचा खरा राजा – रॉयल चहा</p>
+
+<p style="margin-top:15px;">
+☕ पुन्हा भेट द्या
+</p>
+
+</footer>
+
+</body>
+</html>
+```
